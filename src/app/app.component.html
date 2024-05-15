@@ -1,10 +1,9 @@
 <section class="advice">
   <div class="advice-box">
-    <h2 class="advice-head">ADVICE <span>#117</span></h2>
-    <p class="advice-text">
-      &quot; Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-      tenetur incidunt assumenda. &quot;
-    </p>
+    <h2 class="advice-head">
+      ADVICE <span>#{{ adviceData?.slip?.id }}</span>
+    </h2>
+    <p class="advice-text">&quot;{{ adviceData?.slip?.advice }} &quot;</p>
 
     <div class="divider">
       <img
@@ -14,7 +13,7 @@
       />
     </div>
 
-    <div class="dice">
+    <div class="dice" (click)="getAdvice()">
       <img class="dice-img" src="../assets/images/icon-dice.svg" alt="" />
     </div>
   </div>
